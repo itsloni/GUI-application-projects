@@ -13,12 +13,16 @@ def get_currency(input_currency, output_currency):
     return cleaned_rate
 
 
-rate = get_currency("USD", "EUR")
+# rate = get_currency("USD", "EUR")
 
 def show_currency():
     input_label = float(text.text())
-    result = str(input_label * rate)
-    output_label.setText(result)
+    input_currency = input_label_combo.currentText()
+    target_currency = target_label_combo.currentText()
+    rate = get_currency(input_currency, target_currency)
+    result = str(round(input_label * rate, 2))
+    message = f"{input_label} {input_currency} is {result} {target_currency}"
+    output_label.setText(message)
 
 
 
@@ -29,6 +33,16 @@ window.setWindowTitle("Currency Converter App")
 
 layout = QVBoxLayout()
 layout.setContentsMargins(100, 100, 100, 100)
+
+
+input_label_combo = QComboBox()
+list_of_Currency = ["EUR", "USD", "INR", "GBP", "SGD", "CAD", "KRW", "JPY"]
+input_label_combo.addItems(list_of_Currency)
+layout.addWidget(input_label_combo)
+
+target_label_combo = QComboBox()
+target_label_combo.addItems(list_of_Currency)
+layout.addWidget(target_label_combo)
 
 text = QLineEdit()
 layout.addWidget(text)
