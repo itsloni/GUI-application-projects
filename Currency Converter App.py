@@ -12,9 +12,6 @@ def get_currency(input_currency, output_currency):
     cleaned_rate = float(rate[:-4])
     return cleaned_rate
 
-
-# rate = get_currency("USD", "EUR")
-
 def show_currency():
     input_label = float(text.text())
     input_currency = input_label_combo.currentText()
@@ -24,15 +21,13 @@ def show_currency():
     message = f"{input_label} {input_currency} is {result} {target_currency}"
     output_label.setText(message)
 
-
-
 app = QApplication([])
 window = QWidget()
 window.setWindowTitle("Currency Converter App")
 
 
 layout = QVBoxLayout()
-layout.setContentsMargins(100, 100, 100, 100)
+# layout.setContentsMargins(100, 100, 100, 100) to increase the margins of teh laybout box
 
 
 input_label_combo = QComboBox()
