@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout
 from PyQt6.QtWidgets import QLabel, QPushButton, QLineEdit, QHBoxLayout
 
 
-def make_sentence():
+def make_sentence(): #Note these functions used by PyQt6 DO NOT return anything! hence no return was written.
     input_text = text.text()
     output_label.setText(input_text.capitalize() + ".")
 
@@ -24,7 +24,7 @@ btn.clicked.connect(make_sentence) # The 'clicked' is a widgets signal like the 
 
 output_label = QLabel("")
 layout.addWidget(output_label)
-window.setLayout(layout) # To then make the layout show in the window you must call it by using this line
+window.setLayout(layout) # To then make the layout show in the window you must call it by using this line Important!
 
 
 
