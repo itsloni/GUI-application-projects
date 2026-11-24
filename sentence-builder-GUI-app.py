@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout
 from PyQt6.QtWidgets import QLabel, QPushButton, QLineEdit, QHBoxLayout
 
 
-def make_sentence(): #Note these functions used by PyQt6 DO NOT return anything! hence no return was written.
+def make_sentence(): #Note these slot functions used by PyQt6 DO NOT return anything! hence no return was written.
     input_text = text.text()
     output_label.setText(input_text.capitalize() + ".")
 
