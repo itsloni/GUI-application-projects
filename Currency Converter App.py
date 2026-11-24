@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from PyQt6.QtWidgets import QWidget, QApplication, QVBoxLayout
-from PyQt6.QtWidgets import QLineEdit, QLabel, QPushButton
+from PyQt6.QtWidgets import QLineEdit, QLabel, QPushButton, QComboBox #Note: "QComboBox" is the class of 'PyQt6' that allows the dynamic dropdown list design.
 
 def get_currency(input_currency, output_currency):
     url = f"https://x-rates.com/calculator/?from={input_currency}&to={output_currency}&amount=1"
