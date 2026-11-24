@@ -1,10 +1,16 @@
-import sys
+import requests
+from bs4 import BeautifulSoup
 
 from PyQt6.QtWidgets import QWidget, QApplication, QVBoxLayout
 from PyQt6.QtWidgets import QLineEdit, QLabel, QPushButton
 
-def currency_converter():
+def get_currency():
+
+
+
+def show_currency():
     input_label = text.text()
+    input_label *
     output_label.setText(input_label)
 
 
@@ -17,13 +23,13 @@ layout = QVBoxLayout()
 
 text = QLineEdit()
 layout.addWidget(text)
-# text = QLineEdit()
-# layout.addWidget(text)
+text = QLineEdit()
+layout.addWidget(text)
 
 
 btn = QPushButton("Convert")
 layout.addWidget(btn)
-btn.clicked.connect(currency_converter)
+btn.clicked.connect(show_currency)
 
 
 output_label = QLabel("")
