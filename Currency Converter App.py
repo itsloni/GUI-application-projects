@@ -5,6 +5,7 @@ from PyQt6.QtWidgets import QLineEdit, QLabel, QPushButton
 
 def currency_converter():
     input_label = text.text()
+    output_label.setText(input_label)
 
 
 
