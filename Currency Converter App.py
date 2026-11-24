@@ -36,7 +36,6 @@ layout.addWidget(text)
 # text = QLineEdit()
 # layout.addWidget(text)
 
-
 btn = QPushButton("Convert")
 layout.addWidget(btn)
 btn.clicked.connect(show_currency)
