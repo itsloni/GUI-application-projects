@@ -35,18 +35,18 @@ btn1 = QPushButton("select file")
 btn1.setToolTip("open")
 btn1.setFixedWidth(100)
 btn1.clicked.connect(select_file)
-layout.addWidget(btn1, alignment= Qt.AlignmentFlag.AlignCenter)
+layout.addWidget(btn1, alignment=Qt.AlignmentFlag.AlignCenter)
 
 btn2 = QPushButton("Destroy File")
 btn2.setToolTip("delete")
 btn2.setFixedWidth(100)
 btn2.clicked.connect(destroy_file)
-layout.addWidget(btn2, alignment= Qt.AlignmentFlag.AlignCenter)
+layout.addWidget(btn2, alignment=Qt.AlignmentFlag.AlignCenter)
 
 
 
 output_label = QLabel("")
-layout.addWidget(output_label)
+layout.addWidget(output_label, alignment=Qt.AlignmentFlag.AlignCenter)
 
 
 window.setLayout(layout)
