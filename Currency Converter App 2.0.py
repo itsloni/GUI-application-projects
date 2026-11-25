@@ -24,34 +24,41 @@ app = QApplication([])
 window = QWidget()
 window.setWindowTitle("Advanced GUI Currency Converter")
 
-v_layout = QVBoxLayout()
-h_layout = QHBoxLayout()
+layout = QVBoxLayout()
+layout1 = QHBoxLayout()
 
-v_layout.addWidget(h_layout)
+layout.addLayout(layout1)
+
 output_label = QLabel("")
-v_layout.addWidget(output_label)
+layout.addWidget(output_label)
+
+layout2 = QVBoxLayout()
+layout1.addLayout(layout2)
+
+layout3 = QVBoxLayout()
+layout1.addLayout(layout3)
 
 
 
 input_currency_dropdown = QComboBox()
 currency_list = ["EUR", "USD", "INR", "GBP", "SGD", "CAD", "KRW", "JPY"]
 input_currency_dropdown.addItems(currency_list)
-v_layout.addWidget(input_currency_dropdown)
+layout2.addWidget(input_currency_dropdown)
 
 target_currency_dropdown = QComboBox()
 target_currency_dropdown.addItems(currency_list)
-v_layout.addWidget(target_currency_dropdown)
+layout2.addWidget(target_currency_dropdown)
 
 
 text = QLineEdit()
-v_layout.addWidget(text)
+layout3.addWidget(text)
 
 btn = QPushButton("convert")
-v_layout.addWidget(btn)
+btn.clicked.connect(show_currency)
+layout3.addWidget(btn)
 
 
-
-window.setLayout(v_layout)
-window.setLayout(h_layout)
+window.setLayout(layout)
+window.setLayout(layout1)
 window.show()
 app.exec()
