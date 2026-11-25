@@ -1,5 +1,3 @@
-from textwrap import indent
-
 from PyQt6.QtWidgets import QWidget, QApplication, QVBoxLayout, QPushButton, QLabel
 from PyQt6.QtWidgets import QFileDialog
 from pathlib import Path
