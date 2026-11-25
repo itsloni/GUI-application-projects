@@ -19,7 +19,7 @@ def destroy_file():
         with open (path, "wb") as file:
             file.write(b"")
         path.unlink()
-    output_label.setText("Files deleted", alignment= Qt.AlignCenter)
+    output_label.setText("Files deleted")
 #
 
 app = QApplication([])
