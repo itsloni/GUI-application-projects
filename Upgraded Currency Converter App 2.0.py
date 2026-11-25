@@ -55,6 +55,5 @@ btn.clicked.connect(show_currency)
 layout3.addWidget(btn)
 
 window.setLayout(layout)
-window.setLayout(layout1)
 window.show()
 app.exec()
