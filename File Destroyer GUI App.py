@@ -5,14 +5,13 @@ from PyQt6.QtWidgets import QFileDialog
 from pathlib import Path
 from PyQt6.QtCore import Qt
 
+
 def select_file():
     global filenames
     filenames, _ = QFileDialog.getOpenFileNames(window, "select files")
     output_label.setText("\n".join(filenames))
 
 
-
-#
 def destroy_file():
     for filename in filenames:
         path = Path(filename)
@@ -20,7 +19,7 @@ def destroy_file():
             file.write(b"")
         path.unlink()
     output_label.setText("Files deleted")
-#
+
 
 app = QApplication([])
 window = QWidget()
@@ -43,11 +42,8 @@ btn2.setFixedWidth(100)
 btn2.clicked.connect(destroy_file)
 layout.addWidget(btn2, alignment=Qt.AlignmentFlag.AlignCenter)
 
-
-
 output_label = QLabel("")
 layout.addWidget(output_label, alignment=Qt.AlignmentFlag.AlignCenter)
-
 
 window.setLayout(layout)
 window.show()
